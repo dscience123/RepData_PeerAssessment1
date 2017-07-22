@@ -95,11 +95,9 @@ abline(h = seq(0, 20000, 2500), lty = "dashed")
 ```
 Filling the NA makes the distribution more homogeneous. By the way, this operation could hide interesting patterns such as the inactivity during particular days of the week.
 
-```{r,results='hide'}
-aggregate(steps ~ date, data = activity, FUN = mean)
-aggregate(steps ~ date, data = activity, FUN = median)
-aggregate(steps ~ date, data = activity2, FUN = mean)
-aggregate(steps ~ date, data = activity2, FUN = median)
+```{r}
+mean(steps_day2$steps)
+median(steps_day2$steps)
 ```
 The results, that I do not report because of the length, suggest that the strategy adopted to fill the missing values could be not adeguated. Indeed, new biases patterns evidently appear in the calculation operated on the activity2 dataset.
 ## Are there differences in activity patterns between weekdays and weekends?

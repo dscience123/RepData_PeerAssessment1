@@ -175,10 +175,19 @@ Filling the NA makes the distribution more homogeneous. By the way, this operati
 
 
 ```r
-aggregate(steps ~ date, data = activity, FUN = mean)
-aggregate(steps ~ date, data = activity, FUN = median)
-aggregate(steps ~ date, data = activity2, FUN = mean)
-aggregate(steps ~ date, data = activity2, FUN = median)
+mean(steps_day2$steps)
+```
+
+```
+## [1] 10767.19
+```
+
+```r
+median(steps_day2$steps)
+```
+
+```
+## [1] 10767.19
 ```
 The results, that I do not report because of the length, suggest that the strategy adopted to fill the missing values could be not adeguated. Indeed, new biases patterns evidently appear in the calculation operated on the activity2 dataset.
 ## Are there differences in activity patterns between weekdays and weekends?
