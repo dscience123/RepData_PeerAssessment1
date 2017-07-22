@@ -84,8 +84,19 @@ plot(steps_day, type = "h", lwd = 10, lend = "square")
 We are not showing the results as its too large
 
 ```r
-aggregate(steps ~ date, data = activity, FUN = mean)
-aggregate(steps ~ date, data = activity, FUN = median)
+mean(steps_day$steps)
+```
+
+```
+## [1] 10767.19
+```
+
+```r
+median(steps_day$steps)
+```
+
+```
+## [1] 10766
 ```
 
 

@@ -39,9 +39,9 @@ plot(steps_day, type = "h", lwd = 10, lend = "square")
 ### Calculate mean and median of the number of steps taken per day
 
 We are not showing the results as its too large
-```{r,results='hide'}
-aggregate(steps ~ date, data = activity, FUN = mean)
-aggregate(steps ~ date, data = activity, FUN = median)
+```{r}
+mean(steps_day$steps)
+median(steps_day$steps)
 ```
 
 
